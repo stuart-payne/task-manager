@@ -3,10 +3,38 @@
   "dialect": "sqlite",
   "entries": [
     {
-      "idx": 0,
+      "idx": 1,
       "version": "6",
-      "when": 1751381500308,
-      "tag": "0000_seed-statuses",
+      "when": 1751484024699,
+      "tag": "0001_bouncy_thor",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1751484679787,
+      "tag": "0002_init-values",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1751489481771,
+      "tag": "0003_curly_dexter_bennett",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1751490476767,
+      "tag": "0004_seed-priority",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1751495895830,
+      "tag": "0005_sticky_timeslip",
       "breakpoints": true
     }
   ]

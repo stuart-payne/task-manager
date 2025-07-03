@@ -11,7 +11,7 @@ import { LoaderIcon } from "lucide-react"
 import type { DropdownOption } from "@/types";
 import { useQuery } from '@tanstack/react-query';
 
-type DropdownProps = { onChange: (id: string) => void, value: string };
+type DropdownProps = { onChange: (id: string) => void, value: string | null };
 
 export function StatusDropdown({ onChange, value }: DropdownProps) {
 	const { isFetching, data } = useQuery<DropdownOption[]>({
@@ -46,10 +46,10 @@ function Dropdown({
 	onChange: (id: string) => void,
 	isFetching: boolean,
 	placeholder: string,
-	value: string,
+	value: string | null,
 }) {
 	return (
-		<Select onValueChange={onChange} value={value}>
+		<Select onValueChange={onChange} value={value ?? undefined}>
 			<SelectTrigger className="w-[180px]">
 				<SelectValue placeholder={placeholder} />
 				{isFetching && (
@@ -57,8 +57,9 @@ function Dropdown({
 				)}
 			</SelectTrigger>
 			<SelectContent>
-				{data?.map((status) => (
-					<SelectItem value={status.id.toString()}>{status.name}</SelectItem>
+				<SelectItem value="-1">All</SelectItem>
+				{data?.map((option) => (
+					<SelectItem key={option.id} value={option.id.toString()}>{option.name}</SelectItem>
 				))}
 			</SelectContent>
 		</Select>
