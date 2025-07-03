@@ -1,5 +1,7 @@
 # Running instructions
 
+Requires node v22.17.0 or higher
+
 Frontend will work with just the following:
 ```
 npm install
